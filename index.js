@@ -51,7 +51,7 @@ function displayNoteDetailsOnDashboard(noteDetails) {
 
     //delete button functionality
     deleteBtn.addEventListener("click", (event) => {
-        axios.delete(${serverURL}/${noteDetails._id})
+        axios.delete(`${serverURL}/${noteDetails._id}`)
             .then((result) => {
                 ul.removeChild(event.target.parentElement);
                 totalNotes--;

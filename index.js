@@ -2,7 +2,7 @@ const noteTitle = document.getElementById("title");
 const noteDescription = document.getElementById("description");
 let totalNotes = 0;
 let showing = totalNotes;
-const serverURL = "https://crudcrud.com/api/ac95a91a694e4503b1dd696b6da61865/bookdetails";
+const serverURL = "https://crudcrud.com/api/f4a2e537a00a45588a63c0ac846f880e/bookdetails";
 
 //function to handle form submission
 function handleNoteSubmit(event) {
@@ -34,12 +34,12 @@ function displayNoteDetailsOnDashboard(noteDetails) {
     li.className = "notes";
     li.appendChild(
         document.createTextNode(
-            `${noteDetails.title}  `
+            noteDetails.title + " - "
         )
     );
     li.appendChild(
         document.createTextNode(
-            `- ${noteDetails.description}  `
+            noteDetails.description + "  "
         )
     )
 
